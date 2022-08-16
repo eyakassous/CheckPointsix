@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 
 class App extends Component {
-  state = { fullName: 'eya kassous', bio: '###', imgSrc: '/profil_img.png', profession: 'etudiante', show: false, count: 0, intervalId: 0 };
+  state = { fullName: 'eya kassous', bio: '###', imgSrc: 'profile_img.png', profession: 'etudiante', show: false, count: 0, intervalId: 0 };
 
   componentDidMount() {
     const intervalId = setInterval(() => {
@@ -29,7 +29,7 @@ class App extends Component {
       <div style={{ textAlign: 'center', fontFamily: 'georgia', fontWeight: 'bold' }}>
         {this.state.show && <div ><h3>{this.state.fullName}</h3>
           <h3>{this.state.bio}</h3>
-          <h3>{this.state.imgSrc}</h3>
+          <img src={this.state.imgSrc} alt="myimg"></img>
           <h3>{this.state.profession}</h3></div >}
         <button onClick={this.handleshow}>show</button>
         <h1>crono: {this.state.count} seconds</h1>
